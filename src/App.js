@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Cards from "./components/Cards";
 import Search from "./components/Search";
+import Logos from "./components/Logos";
+import Footer from "./components/Footer";
 
 export default class App extends Component {
   render() {
@@ -12,6 +14,8 @@ export default class App extends Component {
         <Banner />
         <Cards />
         <Search />
+        <Logos />
+        <Footer />
       </div>
     );
   }
