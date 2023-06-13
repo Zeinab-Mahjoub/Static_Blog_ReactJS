@@ -33,9 +33,7 @@ export default class Card extends Component {
         <img src={image} alt="cottage" />
         <div>
           <h3>{name}</h3>
-          <p>
-            {counter ? `${Number(cost.split(" ")[0]) * counter} US$` : cost}
-          </p>
+          <p>{counter ? `${+cost.split(" ")[0] * counter} US$` : cost}</p>
         </div>
         <div className={styles.counter}>
           <img
