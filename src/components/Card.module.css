@@ -26,3 +26,28 @@
   border-radius: 5px;
   color: #fff;
 }
+
+.counter {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid silver;
+}
+
+.counter img {
+  width: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.counter span {
+  background-color: #4f8992;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.deactivated {
+  opacity: 0.3;
+  cursor: default !important;
+}
