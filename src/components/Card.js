@@ -13,19 +13,15 @@ export default class Card extends Component {
 
   arrowDownHandler = () => {
     if (this.state.counter === 0) return;
-    this.setState((prevState) => {
-      this.setState({
-        counter: prevState.counter - 1,
-      });
-    });
+    this.setState((prevState) => ({
+      counter: prevState.counter - 1,
+    }));
   };
 
   arrowUpHandler = () => {
-    this.setState((prevState) =>
-      this.setState({
-        counter: prevState.counter + 1,
-      })
-    );
+    this.setState((prevState) => ({
+      counter: prevState.counter + 1,
+    }));
   };
 
   render() {
@@ -37,11 +33,13 @@ export default class Card extends Component {
         <img src={image} alt="cottage" />
         <div>
           <h3>{name}</h3>
-          <p>{cost}</p>
+          <p>
+            {counter ? `${Number(cost.split(" ")[0]) * counter} US$` : cost}
+          </p>
         </div>
         <div className={styles.counter}>
           <img
-            className={!this.state.counter && styles.deactivated}
+            className={!counter ? styles.deactivated : ""}
             src={DownArrowSVG}
             alt="arrow-down"
             onClick={this.arrowDownHandler}
