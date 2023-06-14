@@ -12,10 +12,25 @@ export default class Cards extends Component {
     super();
     this.state = {
       data: [
-        { image: Image1, name: "Fairytale Tree Cottage", cost: "11000 US$" },
-        { image: Image7, name: "House of Love", cost: "12000 US$" },
-        { image: Image3, name: "Sweet Cottage by Lake", cost: "9690 US$" },
-        { image: Image8, name: "Modern Hill Mansion", cost: "124000 US$" },
+        {
+          id: 1,
+          image: Image1,
+          name: "Fairytale Tree Cottage",
+          cost: "11000 Uid: 1,S$",
+        },
+        { id: 2, image: Image7, name: "House of Love", cost: "12000 US$" },
+        {
+          id: 3,
+          image: Image3,
+          name: "Sweet Cottage by Lake",
+          cost: "9690 US$",
+        },
+        {
+          id: 4,
+          image: Image8,
+          name: "Modern Hill Mansion",
+          cost: "124000 US$",
+        },
       ],
     };
   }
@@ -24,7 +39,12 @@ export default class Cards extends Component {
     return (
       <div className={styles.container}>
         {this.state.data.map((item) => (
-          <Card image={item.image} name={item.name} cost={item.cost} />
+          <Card
+            key={item.id}
+            image={item.image}
+            name={item.name}
+            cost={item.cost}
+          />
         ))}
       </div>
     );
