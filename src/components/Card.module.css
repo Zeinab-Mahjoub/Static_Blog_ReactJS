@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  width: 300px;
   flex-direction: column;
   justify-content: space-between;
   margin: 10px;
@@ -11,6 +12,7 @@
 
 .container img {
   width: 300px;
+  height: 300px;
 }
 
 .container h3 {
@@ -35,6 +37,7 @@
 
 .counter img {
   width: 20px;
+  height: fit-content;
   margin: 20px;
   cursor: pointer;
 }
