@@ -1,12 +1,11 @@
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
-import Programmers from "./Programmers";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
   const navigate = useNavigate();
 
-  const clickHandler = () => {
-    navigate("/", { replace: true });
-  };
+  // const clickHandler = () => {
+  //   navigate("/", { replace: true });
+  // };
 
   return (
     <div>
@@ -22,12 +21,7 @@ const AboutUs = () => {
         </li>
       </ul>
 
-      <div>
-        <Routes>
-          <Route path="programmers" element={<Programmers />} />
-          <Route path="drivers" element={<h1>Drivers</h1>} />
-        </Routes>
-      </div>
+      <Outlet />
     </div>
   );
 };

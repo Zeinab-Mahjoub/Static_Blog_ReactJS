@@ -7,6 +7,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import DetailsPage from "./components/DetailsPage";
 import NotFound from "./components/NotFound";
+import Programmers from "./components/Programmers";
 
 export default class App extends Component {
   render() {
@@ -17,7 +18,10 @@ export default class App extends Component {
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<DetailsPage />} />
           <Route path="/" element={<Landing />} />
-          <Route path="/us/*" element={<AboutUs />} />
+          <Route path="/us/*" element={<AboutUs />}>
+            <Route path="programmers" element={<Programmers />} />
+            <Route path="drivers" element={<h1>Drivers</h1>} />
+          </Route>
           <Route path="/*" element={<Navigate to="/notfound" />} />
           <Route path="/notfound" element={<NotFound />} />
         </Routes>
