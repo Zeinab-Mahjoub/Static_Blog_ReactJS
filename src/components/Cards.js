@@ -44,6 +44,7 @@ export default class Cards extends Component {
             image={item.image}
             name={item.name}
             cost={item.cost}
+            id={item.id}
           />
         ))}
       </div>

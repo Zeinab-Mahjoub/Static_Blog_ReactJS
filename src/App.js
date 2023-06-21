@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import { Route, Routes } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
+import DetailsPage from "./components/DetailsPage";
 
 export default class App extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class App extends Component {
         <Navbar />
         <Routes>
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<DetailsPage />} />
           <Route path="/" element={<Landing />} />
           <Route path="/us" element={<AboutUs />} />
         </Routes>
