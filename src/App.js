@@ -17,7 +17,7 @@ export default class App extends Component {
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<DetailsPage />} />
           <Route path="/" element={<Landing />} />
-          <Route path="/us" element={<AboutUs />} />
+          <Route path="/us/*" element={<AboutUs />} />
           <Route path="/*" element={<Navigate to="/notfound" />} />
           <Route path="/notfound" element={<NotFound />} />
         </Routes>
